@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script>
+	<link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet' />
+	<script
+		src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.1.0/mapbox-gl-directions.js"></script>
+	<link rel="stylesheet"
+		href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.1.0/mapbox-gl-directions.css"
+		type="text/css" />
+	<title>Tugas Akhir</title>
+	<link rel="stylesheet" href="asset/style.css">
+	<script src="script.js" defer></script>
+</head>
+
+<body>
+	<main>
+		<div class="wrapper">
+			<header>
+				<nav>
+					<a href="#" class="logo">
+						mausehat.
+					</a>
+					<ul>
+						<li><a href="#about">About Us</a></li>
+						<li>Get Vaccinated
+							<ul id="dropdown">
+								<a href="#instruction">
+									<li>How It Works</li>
+								</a>
+								<a href="#booked">
+									<li>Book Vaccine</li>
+								</a>
+								<a href="#news">
+									<li>News</li>
+								</a>
+							</ul>
+						</li>
+						<li><a href="#contact">Contact Us</a></li>
+						<li><a href="log-in.html">Log In</a></li>
+					</ul>
+				</nav>
+			</header>
+		</div>
+
+		<div id="content">
+			<article id="home" class="header-container">
+				<div class="wrapper">
+					<div class="home-content">
+						<div class="hero-image">
+							<img src="asset/cover-background.svg" alt="cover">
+							<div class="photo-bg"></div>
+						</div>
+
+						<div class="hero-content">
+							<h1>Helping You To Get Vaccinated</h1>
+							<p>
+								Mau Sehat give you an easy platform that helps you to be healthy and vaccinated in the
+								middle of pandemic.
+								We strive to be a helpful to all people of Indonesia, either a lower class or upper
+								class.
+							</p>
+							<a href="#instruction">
+								Get Started!
+							</a>
+						</div>
+					</div>
+				</div>
+			</article>
+
+			<!--End of homepage-->
+
+			<article id="about" class="about-section">
+				<div class="wrapper">
+					<h2>About Us</h2>
+					<div class="about-content">
+						<div class="about-description">
+							<p id="first">
+								mau sehat adalah sebuah aplikasi yang terlahir dari keadaan pandemi yang semakin parah.
+								Kita ingin membuat website yang dapat membantu keadaan sekarang.
+							</p>
+
+							<p id="second">
+								website ini nantinya akan memudahkan user untuk menemukan penyelenggara vaksin di dekat
+								user,
+								mendaftarkan diri untuk vaksin dan lain sebagainya.
+							</p>
+						</div>
+						<img src="asset/about-cover.svg" alt="about-us">
+					</div>
+				</div>
+			</article>
+
+			<!-- End of About Us-->
+
+			<article id="get-vaccinated" class="vaccinated-section">
+				<section id="instruction">
+					<div class="wrapper">
+						<div class="instruction-content">
+							<h2>How it Works </h2>
+							<div class="instruction-description">
+								<div>
+									<h3 id="first">STEP 1</h3>
+									<p id="first">
+										Browse through website and then <a href="log-in.html">login</a>
+										to the mauSehat website.
+									</p>
+									<img src="asset/img1.svg" alt="Step 1"></td>
+								</div>
+								<div>
+									<h3>STEP 2</h3>
+									<p id="second">
+										Fill in your personal data and then submit in <a href="#booked">"book a
+											vaccine"</a> and check email your answer minimum 1x24 hours.
+									</p>
+									<img src="asset/img2.png" alt="Step 2">
+								</div>
+								<div>
+									<h3>STEP 3</h3>
+									<p id="third">Re-register on the mauSehat website.</p>
+									<img id="three" src="asset/img3.png" alt="Step 3">
+								</div>
+								<div>
+									<h3 id="forth">STEP 4</h3>
+									<p id="forth">
+										If the vaccination site has been determined, then immediately
+										come to the
+										vaccination site.
+									</p>
+									<img id="forth" src="asset/img4.png" alt="Step 4">
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section id="booked">
+					<div class="wrapper">
+						<div class="booked-content">
+							<h2>Book A Vaccinate with ease</h2>
+							<form action="map.html" method="GET" onsubmit="myFunction()">
+								<div class="booked-description">
+									<table id="formDataDiri1">
+										<tr>
+											<th>Name:</th>
+										</tr>
+										<tr>
+											<td><input type="text" name="nama" required><br></td>
+										</tr>
+										<tr>
+											<th>Date of birth:</th>
+										</tr>
+										<tr>
+											<td><input id="date" type="date" name="date" required><br></td>
+										</tr>
+										<tr>
+											<th>NIK:</th>
+										</tr>
+										<tr>
+											<td><input id="nik" type="text" name="nik" required><br></td>
+										</tr>
+										<tr>
+											<th>Vaccine Type:</th>
+										</tr>
+										<tr>
+											<td><input id="type" type="text" name="type" required><br></td>
+										</tr>
+									</table>
+									<table id="second">
+										<tr>
+											<th>City:</th>
+										</tr>
+										<tr>
+											<td><input id="city" type="text" name="city" required><br></td>
+										</tr>
+										<tr>
+											<th>Province:</th>
+										</tr>
+										<tr>
+											<td><input id="province" type="text" name="province" required><br></td>
+										</tr>
+										<tr>
+											<th>Address</th>
+										</tr>
+										<tr>
+											<td><input id="address" type="text" name="address" required><br></td>
+										</tr>
+										<tr>
+											<th>Proffesion</th>
+										</tr>
+										<tr>
+											<td><input id="profession" type="text" name="profession" required><br></td>
+										</tr>
+									</table>
+								</div>
+								<input id="submit" type="submit" value="Submit">
+							</form>
+						</div>
+					</div>
+				</section>
+
+				<section id="news">
+					<div class="wrapper">
+						<h2>News</h2>
+						<div class="auto">
+							<div id="first" class="news-content">
+								<div class="news-description">
+									<h3>Vaksin Moderna Datang di Tahap Ke-20</h3>
+									<p>Indonesia kedatangan vaksin COVID-19 tahap ke-20 sebanyak 3.000.060 dosis vaksin
+										Moderna dari Pemerintahan Amerika Serikat pada Minggu (11/7). Vaksin ini
+										merupakan
+										bacth pertama dari total 4.500.160 yang dikirim melalui COVAX Facility. </p>
+								</div>
+								<img src="asset/news1.svg" alt="news1" height="248px" style="margin-left: 122px;">
+							</div>
+							<div id="second" class="news-content">
+								<div class="news-description">
+									<h3>Tambahan 10 Juta Bahan Baku Vaksin Sinovac Tiba di Indonesia</h3>
+									<p>Pada tanggal 12 bulan juli lalu, vaksin Sinovac datang di Indonesia dengan total
+										ada
+										sekitar 10 juta dosis vaksin. Kiriman ini menambah pasok vaksin Sinovac yang
+										sekarang total terdapat 115 juta dosis.</p>
+								</div>
+								<img src="asset/news2.jpg" alt="news2" width="305px" height="248px"
+									style="margin-left: 122px; border-radius: 0px 15px 15px 0px;">
+							</div>
+							<div id="third" class="news-content">
+								<div class="news-description">
+									<h3>Cek Dulu, 10 Pantangan Saat Ingin Melakukan Vaksin Corona</h3>
+									<p>Sebelum kalian melakukan vaksin, ternyata ada beberapa hal yang dapat menjadi
+										penghambat kalian mendapatkan vaksin atau bahkan menjadi tidak mendapatkan
+										vaksin,
+										yuk cek apa saja yang menjadi pantangan vaksin!</p>
+								</div>
+								<img src="asset/news3.jpg" alt="news3" width="305px" height="248px"
+									style="margin-left: 122px; border-radius: 0px 15px 15px 0px;">
+							</div>
+						</div>
+					</div>
+				</section>
+			</article>
+
+			<!-- End of Get Vaccinated-->
+
+			<article id="contact" class="contact-section">
+				<div class="wrapper">
+					<h2>Contact Us</h2>
+					<div class="contact-content">
+						<table>
+							<tr>
+								<th>City</th>
+							</tr>
+							<tr>
+								<td>Malang</td>
+							</tr>
+							<tr>
+								<th>Address</th>
+							</tr>
+							<tr>
+								<td id="second">Jl. Veteran, Ketawanggede, Kec. Lowokwaru</td>
+							</tr>
+							<tr>
+								<th>Phone Number</th>
+							</tr>
+							<tr>
+								<td>(+62) 81321451251</td>
+							</tr>
+							<tr>
+								<th>Email Address :</th>
+							</tr>
+							<tr>
+								<td>MauSehat@mausehat.com</td>
+							</tr>
+							<tr>
+								<th>Social : </th>
+							</tr>
+							<tr>
+								<td id="sixth">
+									<img src="asset/facebook.svg" alt="facebook" width="35px" height="35px">
+									<img id="second" src="asset/instagram.svg" alt="instagram" width="35px"
+										height="35px">
+									<img id="third" src="asset/twitter.svg" alt="twitter" width="35px" height="35px">
+								</td>
+							</tr>
+						</table>
+						<div class="contact-description">
+							<h3>
+								Hit us on the contact in left so we can make a better website for all of you.
+								Or you can just fill the form below !
+							</h3>
+
+							<form>
+								<label for="message">Your Message</label><br>
+								<input id="message" type="text" name="message" required><br>
+								<input id="message" type="text" name="message" required><br>
+								<input id="message" type="text" name="message" required><br>
+								<input id="submitButton" type="submit" value="Submit">
+							</form>
+						</div>
+					</div>
+				</div>
+			</article>
+
+			<!-- End of Contact Us-->
+
+		</div>
+
+		<aside>
+			<article class="profile-card">
+				<div class="profile-container">
+					<header>
+						<h3>Get To Know Me!</h3>
+						<img src="asset/profile-hani.png" alt="Foto Hani">
+						<p>Maharani Fawwaz Ardhani</p>
+
+						<p>Hello everyone! My name is Hani and I'm 19 years old. Hope you guys can enjoy my website.
+							Kindly please follow my social media below here:)</p>
+					</header>
+					<section id="profile-content">
+						<table>
+							<tr>
+								<th><img src="asset/instagram.png" alt="Instagram"></th>
+								<td>maharanifwz</th>
+							</tr>
+							<tr>
+								<th><img src="asset/gmail.png" alt="G-Mail"></th>
+								<td>maharanifwz@gmail.com</td>
+							</tr>
+						</table>
+					</section>
+				</div>
+			</article>
+		</aside>
+	</main>
+	<footer>
+		&copy; 2021, PT Bintang Matondang
+	</footer>
+
+</body>
+
+</html>

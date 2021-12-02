@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet' />
+    <script
+        src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.1.0/mapbox-gl-directions.js"></script>
+    <link rel="stylesheet"
+        href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.1.0/mapbox-gl-directions.css"
+        type="text/css" />
+    <title>Google Maps Clone</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Poppins, sans-serif;
+        }
+
+        #report {
+            background: #FFFCED url('asset/blob.png');
+            background-position: right;
+            background-repeat: no-repeat;
+            background-size: contain;
+            padding-top: 1px;
+        }
+
+        #map {
+            height: 100vh;
+            width: 100vw;
+        }
+
+        .report-content {
+            display: flex;
+            margin-left: 34px;
+        }
+
+        h2 {
+            font-size: 42px;
+            margin-left: 34px;
+        }
+
+        h3 {
+            font-size: 20px;
+        }
+
+        p {
+            border-bottom: 2px solid black;
+            width: 150%;
+            margin-bottom: 35px;
+        }
+
+        p#reminder {
+            float: right;
+            width: 300px;
+            height: 256px;
+            border-bottom: none;
+            text-align: right;
+            padding-left: 300px;
+        }
+
+        .second {
+            margin-left: 225px;
+        }
+
+        .thank-card {
+            background: #FFFCED url('asset/circle-bg.png');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            padding-top: 1px;
+            padding-bottom: 1px;
+        }
+
+        .thank-card h2 {
+            width: 868px;
+            height: 241px;
+            font-size: 30px;
+            text-align: center;
+            margin: 0 auto;
+        }
+    </style>
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <div id="report">
+        <h2>Full Report</h2>
+        <div class="report-content">
+            <div>
+                <h3>Name:</h3>
+                <p id="printName"></p>
+
+                <h3>Date Of Vaccine:</h3>
+                <p>18 Juli 2021</p>
+            </div>
+            <div class="second">
+                <h3>Place Of Vaccine:</h3>
+                <p>RS. Hermina Bekasi</p>
+
+                <h3>Type Of Vaccine:</h3>
+                <p>Sinovac</p>
+            </div>
+            <div>
+                <p id="reminder">Check the place of your vaccine in the map below and prepare the shortest path so you
+                    can minimize
+                    time outside your house</p>
+            </div>
+        </div>
+    </div>
+    <div class="thank-card">
+        <h2>Thanks for participating to make a better Indonesia without Covid-19. Share the website and help us to get
+            others vaccinated.</h2>
+    </div>
+    <div id='map'></div>
+    <script>
+        const urlParams = new URLSearchParams(window.location.search); // Untuk mengambil seluruh alamat web
+        const getName = urlParams.get("nama"); // Untuk mengambil nilai dari parameter 'name'
+
+        const printName = document.querySelector("#printName");
+        printName.innerText = getName;
+
+        function submit() {
+        alert("Make sure all the data that you filled already correct!")
+        alert("Your vaccine has been booked, please come to vaccinate location to re-register in the d-day of your vaccine schedule")
+        alert("Click ok to show full report")
+    }
+    </script>
+</body>
+
+</html>

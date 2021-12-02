@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log-in Page</title>
+    <link rel="stylesheet" href="asset/style.css">
+</head>
+
+<body>
+    <main>
+        <article id="log-in">
+            <div class="wrapper">
+                <div class="contents">
+                    <h2>Login</h2>
+                    <div class="formContent">
+                        <form id="formDataDiri">
+                            <div class="form-element">
+                                <label style="padding-right: 180px" for="e-mail">Email:</label><br>
+                                <input id="e-mail" type="text" name="e-mail" placeholder="e-mail" required><br>
+                            </div>
+                            <div class="form-element">
+                                <label style="padding-right: 155px" for="password">Password:</label><br>
+                                <input id="password" type="password" name="password" placeholder="password"
+                                    required><br>
+                            </div>
+                            <div class="container-center">
+                                <button onclick="signup()">Login</button>
+                                <p>doesn't have account?</p>
+                                <a href="sign-in.html"><span>register here!</span></a>
+                            </div>
+                        </form>
+                    </div>
+                    <div id="messageAfterSubmit"></div>
+                    <div class="container-center">
+                        <img src="asset/google-logo.svg" width="35px" height="35px">
+                        <img id="facebook" src="asset/facebook-logo.svg" alt="google" width="35px" height="35px">
+                    </div>
+                </div>
+            </div>
+        </article>
+    </main>
+</body>

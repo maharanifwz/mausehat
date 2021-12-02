@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log-in Page</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        #sign-in {
+            background: #FFFCED url('asset/wave-bg.png');
+            background-repeat: no-repeat;
+            background-position: bottom;
+            background-size: contain;
+            height: 625px;
+            position: relative;
+            margin: 0 auto;
+            width: auto;
+            padding-bottom: 150px;
+            font-family: Poppins;
+        }
+
+        .signin-content {
+            border: 1px solid black;
+            border-radius: 50px;
+            border-width: 2px;
+            padding: 20px 15px;
+            width: 27%;
+            height: 500px;
+            text-align: center;
+            background-color: #FFFCED;
+            position: absolute;
+            top: 15%;
+            left: 38%;
+            margin-bottom: 25px;
+        }
+
+        .signin-content h2 {
+            margin-bottom: 30px;
+        }
+
+        .element {
+            margin: 8px;
+            align-items: left;
+        }
+
+        .signin-content form input {
+            padding: 8px 10px;
+            margin-bottom: 10px;
+            border-radius: 20px;
+            border: none;
+            background-color: #f0ebebf5;
+            color: rgba(14, 9, 9, 0.719);
+            font-size: 15px;
+            outline: none;
+        }
+
+        .signin-content form button {
+            border-radius: 15px;
+            padding: 5px;
+            border: none 0;
+            background-color: #F7B13C;
+            font-size: 15px;
+            color: white;
+            width: 40%;
+            margin-bottom: 25px;
+            outline: none;
+        }
+
+        .signin-content form button a{
+            text-decoration: none;
+            color: white;
+        }
+    </style>
+	<script src="script.js" defer></script>
+</head>
+
+<body>
+    <main>
+        <article id="sign-in">
+            <div class="wrapper">
+                <div class="signin-content">
+                    <h2>Get Started With Us</h2>
+                    <div class="formContent">
+                        <form id="formDataDiri">
+                            <div class="element">
+                                <label style="padding-right: 150px" for="e-mail">Name:</label><br>
+                                <input id="nama" type="text" name="nama" placeholder="name" required><br>
+                            </div>
+                            <div class="element">
+                                <label style="padding-right: 125px" for="password">Password:</label><br>
+                                <input id="password" type="password" name="password" placeholder="password"
+                                required><br>
+                            </div>
+                            <div class="element">
+                                <label style="padding-right: 63px" for="password">Confirm Password:</label><br>
+                                <input id="password" type="password" name="password" placeholder="password"
+                                    required><br>
+                            </div>
+                            <div class="element" style="margin-top: 15px;">
+                                <input id="checkbox" type="checkbox" name="checkbox" value="CheckList"> I agree to the
+                                <strong>Term</strong> and <strong>Policy</strong><br>
+                            </div>
+                            <div class="container-center">
+                                <button onclick="signup()"><a href="submission.html">Register Now</a></button>
+                                <p style="font-size: 15px;">already have account?</p>
+                                <a style="font-size: 15px;" href="log-in.html"><span>sign in!</span></a>
+                            </div>
+                        </form>
+                    </div>
+                    <div id="messageAfterSubmit"></div>
+                </div>
+            </div>
+        </article>
+    </main>
+</body>
